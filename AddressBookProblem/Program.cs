@@ -6,9 +6,10 @@ namespace AddressBookProblem
         public static void Main(string[] args)
         {
             Console.WriteLine("Welcome to Address Book Program");
-            while(true)
+            AddressBook adBook = new AddressBook();
+            while (true)
             {
-                AddressBook adBook = new AddressBook();
+                
                 Console.WriteLine("Enter The Choice \n1)Create Contact\n2)Add Contact");
                 int choice=Convert.ToInt32(Console.ReadLine());
                 switch(choice)
