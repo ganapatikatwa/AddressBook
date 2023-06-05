@@ -10,7 +10,7 @@ namespace AddressBookProblem
             while (true)
             {
                 
-                Console.WriteLine("Enter The Choice \n1)Create Contact\n2)Add Contact");
+                Console.WriteLine("Enter The Choice \n1)Create Contact\n2)Add Contact\n3)Edit Contact");
                 int choice=Convert.ToInt32(Console.ReadLine());
                 switch(choice)
                 {
@@ -22,7 +22,10 @@ namespace AddressBookProblem
                         adBook.AddContact();
                         adBook.Display();
                         break;
-
+                    case 3:
+                        adBook.EditContact();
+                        adBook.Display();
+                        break;
                     default:
                         Console.WriteLine("Select Proper Choice");
                         break;
