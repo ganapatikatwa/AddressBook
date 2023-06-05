@@ -10,7 +10,8 @@ namespace AddressBookProblem
             while (true)
             {
                 
-                Console.WriteLine("Enter The Choice \n1)Create Contact\n2)Add Contact\n3)Edit Contact");
+                Console.WriteLine("Enter The Choice \n1)Create Contact\n2)Add Contact\n3)Edit Contact" +
+                    "\n4)Delete Contact");
                 int choice=Convert.ToInt32(Console.ReadLine());
                 switch(choice)
                 {
@@ -24,6 +25,10 @@ namespace AddressBookProblem
                         break;
                     case 3:
                         adBook.EditContact();
+                        adBook.Display();
+                        break;
+                    case 4:
+                        adBook.DeleteContact();
                         adBook.Display();
                         break;
                     default:

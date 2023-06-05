@@ -112,8 +112,25 @@ namespace AddressBookProblem
                             break;
                     }
                 }
-                Console.WriteLine("No Contact Details Found");
+                
             }
+            Console.WriteLine("No Contact Details Found");
+        }
+
+        public void DeleteContact()
+        {
+            Console.WriteLine("Enter the FirstName to Edit the Contact");
+            string Firstname = Console.ReadLine();
+            foreach (Contact contact in addressbook)
+            {
+                if (contact.Firstname.ToLower() == Firstname.ToLower())
+                {
+                    addressbook.Remove(contact);
+                    Console.WriteLine("Entered Contact is Deleted");
+                    return;
+                }
+            }
+            Console.WriteLine("Contact Not Found");
         }
         public void Display()
         {
