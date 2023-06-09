@@ -116,6 +116,17 @@ namespace AddressBookProblem
             }
             Console.WriteLine("No Contact Details Found");
         }
+        public void AddMultipleContact()
+        {
+            Console.WriteLine("Enter the Number of Contacts to add");
+            int num=Convert.ToInt32(Console.ReadLine());
+            while(num>0)
+            {
+                AddContact();
+                Console.WriteLine("----------------");
+                num--;
+            }
+        }
 
         public void DeleteContact()
         {
