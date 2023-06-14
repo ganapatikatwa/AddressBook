@@ -11,7 +11,7 @@ namespace AddressBookProblem
             {
                 
                 Console.WriteLine("Enter The Choice \n1)Create Contact\n2)Add Contact\n3)Edit Contact" +
-                    "\n4)Delete Contact\n5)Add Multiple Contacts");
+                    "\n4)Delete Contact\n5)Add Multiple Contacts\n6)Unique Address Book Name\n7)Display");
                 int choice=Convert.ToInt32(Console.ReadLine());
                 switch(choice)
                 {
@@ -33,6 +33,11 @@ namespace AddressBookProblem
                         break;
                     case 5:
                         adBook.AddMultipleContact();
+                        adBook.Display();
+                        break;
+                    case 6:
+                        UniqAddressBookName uniqAddressBookName= new UniqAddressBookName();
+                        uniqAddressBookName.NewAddressBook();
                         adBook.Display();
                         break;
                     default:
